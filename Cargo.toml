@@ -8,7 +8,7 @@ license = "MIT OR Apache-2.0"
 publish = false
 
 [dependencies]
-aoc-rust = { version = "=1.0.0", git = "https://github.com/jikovec/aoc-rust", rev = "ec79ca496493aac9661dc9ca0bcba7f24cef2b20" }
+aoc-rust = { version = "=1.0.1", git = "https://github.com/jikovec/aoc-rust", rev = "9046fcf3c59df2e0d94a4559d96a99ae74b05454" }
 
 [profile.profiling]
 inherits = "release"

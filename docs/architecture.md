@@ -14,4 +14,4 @@ Private inputs and generated artifacts are ignored. Keep tests, solution notes a
 
 The [official 2026 calendar](https://adventofcode.com/2026) confirms the December 1 opening at 00:00 EST (06:00 CET in Bratislava). The [organizer’s recurring schedule announcement](https://bsky.app/profile/was.tl/post/3m3qskpuqbs2m) specifies 12 days beginning December 1. The pre-event 2026 calendar has yet to list the individual days, so the tracked schedule applies December 1–12 and allows adjustment per day after the official calendar opens.
 
-The Cargo dependency resolves to the commit tagged [aoc-rust v1.0.0](https://github.com/jikovec/aoc-rust/releases/tag/v1.0.0).
+The Cargo dependency resolves to the commit tagged [aoc-rust v1.0.1](https://github.com/jikovec/aoc-rust/releases/tag/v1.0.1).

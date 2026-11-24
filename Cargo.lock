@@ -11,5 +11,5 @@ dependencies = [
 
 [[package]]
 name = "aoc-rust"
-version = "1.0.0"
-source = "git+https://github.com/jikovec/aoc-rust?rev=ec79ca496493aac9661dc9ca0bcba7f24cef2b20#ec79ca496493aac9661dc9ca0bcba7f24cef2b20"
+version = "1.0.1"
+source = "git+https://github.com/jikovec/aoc-rust?rev=9046fcf3c59df2e0d94a4559d96a99ae74b05454#9046fcf3c59df2e0d94a4559d96a99ae74b05454"

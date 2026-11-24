@@ -17,7 +17,7 @@
           rust = pkgs.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml;
           common = [ rust pkgs.git pkgs.gh ];
           profiling = pkgs.lib.optionals pkgs.stdenv.isLinux [
-            pkgs.linuxPackages.perf pkgs.valgrind pkgs.heaptrack pkgs.time pkgs.flamegraph
+            pkgs.perf pkgs.valgrind pkgs.heaptrack pkgs.time pkgs.flamegraph
           ];
           shell = packages: pkgs.mkShell {
             inherit packages;

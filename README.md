@@ -1,13 +1,13 @@
 # Advent of Code 2026
 
-An independent Rust portfolio for the [2026 Advent of Code event](https://adventofcode.com/2026). Each day is a separate binary. The project uses the Rust standard library and [aoc-rust](https://github.com/jikovec/aoc-rust), pinned to the commit for framework release `v1.0.0` through Cargo.
+An independent Rust portfolio for the [2026 Advent of Code event](https://adventofcode.com/2026). Each day is a separate binary. The project uses the Rust standard library and [aoc-rust](https://github.com/jikovec/aoc-rust), pinned to the commit for framework release `v1.0.1` through Cargo.
 
 ## Getting started
 
 Run `nix develop` on NixOS, or use a Rustup installation on another OS. Run `cargo fetch --locked` once before using Cargo offline.
 
 ```sh
-cargo install --locked --git https://github.com/jikovec/aoc-rust --rev ec79ca496493aac9661dc9ca0bcba7f24cef2b20 --bin cargo-aoc
+cargo install --locked --git https://github.com/jikovec/aoc-rust --rev 9046fcf3c59df2e0d94a4559d96a99ae74b05454 --bin cargo-aoc
 cargo aoc install-hook
 cargo aoc init --day 1
 cargo aoc readme
@@ -29,7 +29,7 @@ See [the development guide](CONTRIBUTING.md), [repository architecture](docs/arc
 
 0/24 stars (0.0%); 0/24 locally implemented parts; 0/12 fully implemented days; 0/12 scaffolded days.
 
-Framework `v1.0.0` · Annual release version `v0.1.0`
+Framework `v1.0.1` · Annual release version `v0.1.0`
 
 | Day | Release date | Part | Local progress | AoC star | Reference | Optimized | Tests | Reference mean | Optimized mean | Mean time saved | Profile | Visual | Complexity |
 | ---: | :--- | ---: | :--- | :---: | :---: | :---: | :--- | ---: | ---: | ---: | :---: | :---: | :--- |
