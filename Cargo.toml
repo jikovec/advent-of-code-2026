@@ -1,0 +1,19 @@
+[package]
+name = "advent-of-code-2026"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.100"
+description = "Independent Rust solutions for the 2026 Advent of Code event"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[dependencies]
+aoc-rust = { version = "=1.0.0", git = "https://github.com/jikovec/aoc-rust", rev = "ec79ca496493aac9661dc9ca0bcba7f24cef2b20" }
+
+[profile.profiling]
+inherits = "release"
+debug = "full"
+strip = "none"
+
+[lints.rust]
+unsafe_code = "forbid"

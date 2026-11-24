@@ -1,0 +1,39 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install pinned Rust
+        run: rustup show
+      - name: Fetch dependencies and install the pinned framework CLI
+        shell: bash
+        run: |
+          rev=$(sed -nE 's|^source = "git\+https://github.com/jikovec/aoc-rust\?rev=([a-f0-9]{40})#[a-f0-9]{40}"$|\1|p' Cargo.lock)
+          [[ "$rev" =~ ^[a-f0-9]{40}$ ]]
+          cargo fetch --locked
+          cargo install --locked --offline --git https://github.com/jikovec/aoc-rust --rev "$rev" --root "$RUNNER_TEMP/aoc-rust" aoc-rust
+          echo "$RUNNER_TEMP/aoc-rust/bin" >> "$GITHUB_PATH"
+      - name: Check the framework pin, discovery, README and tracked paths
+        run: cargo aoc verify
+      - run: cargo fmt --all -- --check
+      - run: cargo clippy --locked --offline --all-targets -- -D warnings
+      - run: cargo build --locked --offline --all-targets
+      - run: cargo test --locked --offline --all-targets
+      - run: cargo test --locked --offline --doc
+      - run: cargo doc --locked --offline --no-deps
+        env:
+          RUSTDOCFLAGS: -D warnings

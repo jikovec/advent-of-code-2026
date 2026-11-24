@@ -1,0 +1,3 @@
+# Use Cargo's local dependency cache after the initial pinned Git fetch.
+[alias]
+day = "run --bin"

@@ -1,0 +1,15 @@
+/target/
+/result
+/.direnv/
+/.aoc/
+/.aoc-edit-*.tmp
+/inputs/*
+!/inputs/.gitignore
+/benchmarks/*
+!/benchmarks/README.md
+/profiles/
+/visualizations/
+.env
+.env.*
+*.local.*
+*.profraw
